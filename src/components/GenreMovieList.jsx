@@ -7,8 +7,8 @@ const GenreMovieList = () => {
     <div>
       {genere?.map(
         (item, index) =>
-          index <= 4 && (
-            <div key={index} className="p-2 md:p-8 px-5 md:px-16">
+          index <= 9 && (
+            <div key={index} className="p-2 md:p-4 px-5 md:px-16">
               <h2 className="text-[18px] text-white font-semibold">
                 {item.name}
               </h2>

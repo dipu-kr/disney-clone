@@ -29,7 +29,7 @@ const MovieList = ({ genreId, index_ }) => {
 
   return (
     <div
-      className="flex items-center gap-2 md:gap-5 overflow-x-auto scrollbar-none py-3 scroll-smooth transition-all duration-200 ease-in-out"
+      className="flex items-center gap-2 md:gap-5 overflow-x-auto scrollbar-none py-4 scroll-smooth transition-all duration-200 ease-in-out"
       ref={elementRef}
     >
       {movieList?.map((item, index) => (
