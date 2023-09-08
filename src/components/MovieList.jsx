@@ -33,13 +33,13 @@ const MovieList = ({ genreId, index_ }) => {
       ref={elementRef}
     >
       {movieList?.map((item, index) => (
-        <div key={index}>
+        <>
           {index_ % 3 === 0 ? (
-            <HrMovieCard key={index} />
+            <HrMovieCard key={index} movie={item} />
           ) : (
             <MovieCard key={index} movie={item} />
           )}
-        </div>
+        </>
       ))}
       <HiChevronLeft
         className="text-white text-[30px] absolute cursor-pointer ml-8 left-8 hidden md:block"
