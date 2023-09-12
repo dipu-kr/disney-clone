@@ -9,7 +9,7 @@ const HrMovieCard = ({ movie }) => {
         className="w-[110px] md:w-[260px] object-cover rounded-tl-lg rounded-tr-lg  cursor-pointer"
       />
       <div className="w-[110px] md:w-[260px] h-[35px] md:-h-[45px] px-3 bg-[#222222] rounded-bl-lg rounded-br-lg ">
-        <h2 className="text-white pt-2 text-xs md:text-sm truncate">
+        <h2 className="text-white pt-2 text-[10px] uppercase md:text-[12px] truncate">
           {movie.title}
         </h2>
       </div>

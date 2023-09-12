@@ -35,20 +35,32 @@ const MovieList = ({ genreId, index_ }) => {
       {movieList?.map((item, index) => (
         <>
           {index_ % 3 === 0 ? (
-            <HrMovieCard key={index} movie={item} />
+            <>
+              <HrMovieCard key={index} movie={item} />
+              <HiChevronLeft
+                className="text-white text-[30px] absolute cursor-pointer ml-8 left-8 hidden md:block"
+                onClick={() => sliderLeft(elementRef.current)}
+              />
+              <HiChevronRight
+                className="text-white text-[30px] absolute cursor-pointer mr-8 right-8 hidden md:block"
+                onClick={() => sliderRight(elementRef.current)}
+              />
+            </>
           ) : (
-            <MovieCard key={index} movie={item} />
+            <>
+              <MovieCard key={index} movie={item} />
+              <HiChevronLeft
+                className="text-white text-[30px] absolute cursor-pointer ml-8 left-8 hidden md:block"
+                onClick={() => sliderLeft(elementRef.current)}
+              />
+              <HiChevronRight
+                className="text-white text-[30px] absolute cursor-pointer mr-8 right-8 hidden md:block"
+                onClick={() => sliderRight(elementRef.current)}
+              />
+            </>
           )}
         </>
       ))}
-      <HiChevronLeft
-        className="text-white text-[30px] absolute cursor-pointer ml-8 left-8 hidden md:block"
-        onClick={() => sliderLeft(elementRef.current)}
-      />
-      <HiChevronRight
-        className="text-white text-[30px] absolute cursor-pointer mr-8 right-8 hidden md:block"
-        onClick={() => sliderRight(elementRef.current)}
-      />
     </div>
   );
 };

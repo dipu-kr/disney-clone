@@ -8,6 +8,7 @@ const Slider = () => {
   const [movieList, setMovieList] = useState([]);
   const elementRef = useRef();
   const screenWidth = window.innerWidth;
+  console.log(screenWidth);
 
   useEffect(() => {
     getTrendingMovies();
@@ -20,11 +21,13 @@ const Slider = () => {
   };
 
   const sliderRight = (element) => {
-    element.scrollLeft += screenWidth - 110;
+    element.scrollLeft += screenWidth + 110;
+    console.log("right", (element.scrollLeft += screenWidth));
   };
 
   const sliderLeft = (element) => {
-    element.scrollLeft -= screenWidth - 110;
+    element.scrollLeft -= screenWidth + 110;
+    console.log("left", (element.scrollLeft -= screenWidth));
   };
 
   return (
